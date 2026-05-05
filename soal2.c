@@ -31,6 +31,7 @@ int main(void){
         if (simbol[i] == '('){
             int j = i+1;
             //Mencari Pasangan karakter
+            counta = 1;
             while  (simbol[j] != 0){
                 if (simbol[j] == '('){
                     counta++;
@@ -52,6 +53,7 @@ int main(void){
         else if (simbol[i] == ')'){
             int j = i-1;
             //Mencari pasangan karakter
+            countb = 1;
             while  (simbol[j] != 0){
                 if (simbol[j] == ')'){
                     counta++;
