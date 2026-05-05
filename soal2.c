@@ -77,6 +77,6 @@ int main(void){
     }
 
     //output jumlah karakter yang dibutuhkan untuk memperbaiki
-    printf("%d\n", count);
+    //printf("%d\n", count);
     return 0;
 }
