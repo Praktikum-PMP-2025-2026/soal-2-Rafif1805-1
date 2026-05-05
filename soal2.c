@@ -19,9 +19,8 @@ int main(void){
     char simbol[MAX_STRING_LENGTH];
     
     //melakukan input rangakaian karakter
-    gets(simbol);
+    scanf("%s", simbol);
     int count = 0;
-    printf("%d\n", count);
     int counta = 0;
     int countb = 0;
     int i = 0;
@@ -29,14 +28,14 @@ int main(void){
     //melakukan looping untuk pengetesan karakter
     while  (simbol[i] != 0){
         //Jika karakter ke-i adalah "("
-        if (simbol[i] == "("){
+        if (simbol[i] == '('){
             int j = i+1;
             //Mencari Pasangan karakter
             while  (simbol[j] != 0){
-                if (simbol[j] == "("){
+                if (simbol[j] == '('){
                     counta++;
                 }
-                else if (simbol[j] == ")"){
+                else if (simbol[j] == ')'){
                     countb++;
                 }
                 j++;
@@ -50,14 +49,14 @@ int main(void){
             }
         }
         //Jika karakter ke-i adalah ")"
-        else if (simbol[i] == ")"){
+        else if (simbol[i] == ')'){
             int j = i-1;
             //Mencari pasangan karakter
             while  (simbol[j] != 0){
-                if (simbol[j] == ")"){
+                if (simbol[j] == ')'){
                     counta++;
                 }
-                else if (simbol[j] == "("){
+                else if (simbol[j] == '('){
                     countb++;
                 }
                 j--;
@@ -70,13 +69,10 @@ int main(void){
                 count++;
             }
         }
-        else {
-            return 0;
-        }
         i++;
     }
 
     //output jumlah karakter yang dibutuhkan untuk memperbaiki
-    //printf("%d\n", count);
+    printf("%d\n", count);
     return 0;
 }
