@@ -14,11 +14,12 @@
 
 #define MAX_STRING_LENGTH 50
 
+
 int main(void){
-    char* simbol = (char*)malloc(sizeof(char));
+    char simbol[MAX_STRING_LENGTH];
     
     //melakukan input rangakaian karakter
-    scanf("%s", simbol);
+    gets(simbol);
     int count = 0;
     int counta = 0;
     int countb = 0;
@@ -27,14 +28,14 @@ int main(void){
     //melakukan looping untuk pengetesan karakter
     while  (simbol[i] != 0){
         //Jika karakter ke-i adalah "("
-        if (strcmp (simbol[i], "(") == 0){
+        if (simbol[i] == "("){
             int j = i+1;
             //Mencari Pasangan karakter
             while  (simbol[j] != 0){
-                if (strcmp (simbol[j], "(") == 0){
+                if (simbol[j] == "("){
                     counta++;
                 }
-                else if (strcmp (simbol[j], ")")){
+                else if (simbol[j] == ")"){
                     countb++;
                 }
                 j++;
@@ -49,14 +50,14 @@ int main(void){
             }
         }
         //Jika karakter ke-i adalah ")"
-        else if (strcmp (simbol[i], ")") == 0){
+        else if (simbol[i] == ")"){
             int j = i-1;
             //Mencari pasangan karakter
             while  (simbol[j] != 0){
-                if (strcmp (simbol[j], ")") == 0){
+                if (simbol[j] == ")"){
                     counta++;
                 }
-                else if (strcmp (simbol[j], "(") == 0){
+                else if (simbol[j] == "("){
                     countb++;
                 }
                 j--;
