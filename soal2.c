@@ -15,15 +15,13 @@
 #define MAX_STRING_LENGTH 50
 
 int main(void){
-    char simbol[MAX_STRING_LENGTH];
+    char* simbol = (char*)malloc(sizeof(char));
     
     //melakukan input rangakaian karakter
-    gets(simbol);
-
+    scanf("%s", simbol);
     int count = 0;
-    int counta=0;
-    int countb=0;
-
+    int counta = 0;
+    int countb = 0;
     int i = 0;
 
     //melakukan looping untuk pengetesan karakter
