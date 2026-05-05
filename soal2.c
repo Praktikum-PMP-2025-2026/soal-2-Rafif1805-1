@@ -21,6 +21,7 @@ int main(void){
     //melakukan input rangakaian karakter
     gets(simbol);
     int count = 0;
+    printf("%d\n", count);
     int counta = 0;
     int countb = 0;
     int i = 0;
@@ -42,7 +43,6 @@ int main(void){
             }
             //Terdapat pasangan karakter
             if (counta <= countb){
-                break;
             }
             //Tidak ada pasangan karakter
             else if (counta > countb){
@@ -64,7 +64,6 @@ int main(void){
             }
             //Terdapat pasangan karakter
             if (counta <= countb){
-                break;
             }
             //Tidak ada pasangan karakter
             else if (counta > countb){
@@ -78,6 +77,6 @@ int main(void){
     }
 
     //output jumlah karakter yang dibutuhkan untuk memperbaiki
-    printf("%d\n", &count);
+    printf("%d\n", count);
     return 0;
 }
